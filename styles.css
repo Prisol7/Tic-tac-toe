@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+}
+#options{
+display: flex;
+}
+#container{
+    height: 700px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3,3fr);
+    border: solid black 1px;
+}
+#container div{
+    border: solid black 1px;
+    font-size: 80px;
+    text-align: center;
+    
+}
+
+#container div:hover{
+    background-color: red;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /* Black w/ opacity */
+    animation-name: modal-animation;
+    animation-duration: 0.5s;
+  }
+  
+  @-webkit-keyframes modal-animation {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+  
+@keyframes modal-animation {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin-top: 400px;
+    margin-left: 25%;
+    height: 300px;
+    border: 5px solid black;
+    width: 50%; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+ #restart{
+    height: 80px;
+    width: 120px;
+    
+  }
+  
+  .trophy{
+      height: 80px;
+      width: auto;
+      transform: scale(0.6);
+      animation: scaleCup 2s infinite alternate;
+  }
+  @keyframes scaleCup {
+    0% {
+      transform: scale(0.5);
+    } 
+    
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  button{
+    border: 2px solid purple;
+    background-color: white;
+    color: purple;
+    height: 40px;
+    width: 60px;
+    
+  }
+  button:hover {
+      background-color: purple;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+
+@media only screen and (max-width: 900px) {
+    #container{
+        height: 650px;
+        width: 650px;
+    }
+    
+      
+      
+}
+
+@media only screen and (max-width: 750px) {
+    #container{
+        height: 550px;
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #container{
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #container{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+
+  
+
